@@ -1,0 +1,51 @@
+$cardWidth: 480px;
+$borderColor: #dee2e6;
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.articleBody {
+  display: flex;
+  flex-direction: column;
+  width: $cardWidth;
+  border: 1px solid $borderColor;
+  border-top: none;
+  h2 {
+    margin: 20px;
+    text-align: center;
+  }
+}
+.cardAttrs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cardFooter {
+  width: $cardWidth;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 10px;
+}
+li {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  border-top: 1px solid $borderColor;
+  p,
+  span {
+    margin: 10px;
+  }
+  span {
+    align-self: center;
+  }
+}
