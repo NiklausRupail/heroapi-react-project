@@ -1,4 +1,4 @@
-$cardWidth: 450px;
+$cardWidth: 400px;
 $borderColor: #dee2e6;
 
 .statImg {
@@ -9,9 +9,10 @@ $borderColor: #dee2e6;
   width: $cardWidth;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  height: 500px;
+  height: 450px;
 }
 .cardWrapper {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,10 +53,19 @@ $borderColor: #dee2e6;
 }
 @media (min-width: 1000px) {
   .cardImg {
-    width: 488px;
-    height: 600px;
+    width: 488px !important;
+    height: 600px !important;
   }
   .articleBody {
-    width: 488px;
+    width: 488px !important;
+  }
+}
+@media (min-width: 800px) {
+  .cardImg {
+    width: 450x !important;
+    height: 600px !important;
+  }
+  .articleBody {
+    width: 450px !important;
   }
 }

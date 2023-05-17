@@ -27,8 +27,10 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  img {
+  .heroImg {
     border-radius: 15px;
+    width: 400px;
+    height: 450px;
   }
   .heroData {
     .heroPowerstats {
@@ -39,6 +41,12 @@
       flex-direction: row;
     }
     .lifeInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
       p {
         font-size: 20px;
         line-height: 1.7;
@@ -47,14 +55,22 @@
         border: none;
         padding: 0.5rem 1rem;
       }
-      display: flex;
-      gap: 4rem;
     }
   }
 }
 @media (min-width: 900px) {
   .heroInfo {
     flex-direction: row;
+  }
+  .heroImg {
+    width: 480px;
+    height: 600px;
+  }
+  .lifeInfo {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    gap: 4rem !important;
   }
 }
 

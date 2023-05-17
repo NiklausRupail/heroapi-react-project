@@ -34,7 +34,7 @@ const HeroDetailed = () => {
     <article className={styles.detailedHero}>
       <h1>{name}</h1>
       <div className={styles.heroInfo}>
-        <img src={image.url} alt={name} />
+        <img className={styles.heroImg} src={image.url} alt={name} />
         <div className={styles.heroData}>
           <div className={styles.heroPowerstats}>
             <div className={styles.powerstat}>
