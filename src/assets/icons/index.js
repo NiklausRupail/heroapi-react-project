@@ -1,5 +1,5 @@
-export const combat = require('./boxing.svg');
-export const strength = require('./fist.svg');
-export const speed = require('./speedometer.svg');
-export const intelligence = require('./thinking.svg');
-export const durability = require('./durable.svg');
+export { default as combat } from './boxing.svg';
+export { default as durability } from './durable.svg';
+export { default as strength } from './fist.svg';
+export { default as speed } from './speedometer.svg';
+export { default as intelligence } from './thinking.svg';

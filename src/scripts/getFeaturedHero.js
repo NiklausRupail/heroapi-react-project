@@ -11,5 +11,10 @@ export const getFeaturedHero = async (id) => {
 
   // console.log(image, powerstats, powerstats.name);
 
-  return { name: powerstats.name, powerstats, imgUrl: image.url };
+  return {
+    name: powerstats.name,
+    powerstats,
+    imgUrl: image.url,
+    id: powerstats.id
+  };
 };

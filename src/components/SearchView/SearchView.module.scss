@@ -1,9 +1,8 @@
-.heroesFeatured {
+.cardsPlaceholder {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-around;
   gap: 3rem;
-  margin-top: 3rem;
 }
 .container {
   margin: 0 auto;

@@ -1,16 +1,26 @@
+import { Route, Routes } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import HeroesFeatured from './components/HeroesFeatured/HeroesFeatured';
 import Nav from './components/Nav/Nav';
+import SearchView from './components/SearchView/SearchView';
+import './styles/globals.scss';
+import './styles/reset.scss';
+import HeroDetailed from './components/HeroDetailed/HeroDetailed';
 
 function App() {
   return (
-    <>
-      <Nav></Nav>
+    <BrowserRouter>
+      <Nav />
       <main className='container'>
-        <HeroesFeatured />
+        <Routes>
+          <Route path='/' element={<HeroesFeatured />} />
+          <Route path='/hero/:id' element={<HeroDetailed />} />
+          <Route path='/search/:name' element={<SearchView />} />
+        </Routes>
       </main>
       <footer></footer>
-    </>
+    </BrowserRouter>
   );
 }
 

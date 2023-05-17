@@ -1,3 +1,39 @@
 .nav {
+  height: 80px;
   background-color: black;
+  color: white;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav {
+  a {
+    font-size: 130%;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.logoImg {
+  width: 140px;
+}
+
+.navSearch {
+  input {
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+  }
+
+  button {
+    height: 30px;
+    padding: 3px 5px;
+    border-radius: 8px;
+  }
 }

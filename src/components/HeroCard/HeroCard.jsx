@@ -1,36 +1,60 @@
+import { Link } from 'react-router-dom';
+import * as icon from '../../assets/icons';
 import styles from './HeroCard.module.scss';
 
 const HeroCard = (props) => {
-  const { name, powerstats, imgUrl } = props;
+  const { name, powerstats, imgUrl, id } = props;
+
   return (
     <article className={styles.cardWrapper}>
       <header className={styles.cardHeader}>
-        <img src={imgUrl} alt='' />
+        <Link to={`/hero/${id}`}>
+          <img className={styles.cardImg} src={imgUrl} alt='' />
+        </Link>
       </header>
       <section className={styles.articleBody}>
         <h2>{name}</h2>
-        <ul className={styles.cardAttrs}>
-          <li>
-            <p>Combat</p>
+        <div className={styles.cardAttrs}>
+          <div className={styles.powerstat}>
+            <img
+              className={styles.statImg}
+              src={icon.combat}
+              alt='Combat Icon'
+            />
             <span>{powerstats.combat}</span>
-          </li>
-          <li>
-            <p>Speed</p>
+          </div>
+          <div className={styles.powerstat}>
+            <img className={styles.statImg} src={icon.speed} alt='Speed Icon' />
+
             <span>{powerstats.speed}</span>
-          </li>
-          <li>
-            <p>Intelligence</p>
+          </div>
+          <div className={styles.powerstat}>
+            <img
+              className={styles.statImg}
+              src={icon.intelligence}
+              alt='Intelligence Icon'
+            />
+
             <span>{powerstats.intelligence}</span>
-          </li>
-          <li>
-            <p>Durability</p>
+          </div>
+          <div className={styles.powerstat}>
+            <img
+              className={styles.statImg}
+              src={icon.durability}
+              alt='Durability Icon'
+            />
+
             <span>{powerstats.durability}</span>
-          </li>
-          <li>
-            <p>Strength</p>
+          </div>
+          <div className={styles.powerstat}>
+            <img
+              className={styles.statImg}
+              src={icon.strength}
+              alt='Strength Icon'
+            />
             <span>{powerstats.strength}</span>
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
     </article>
   );
