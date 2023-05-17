@@ -1,10 +1,9 @@
 import styles from './HeroCard.module.scss';
 
 const HeroCard = (props) => {
-    
-    console.log(props.hero) ;
-    const { name, powerstats, imgUrl } = props.hero;
-  return ( 
+  console.log(props.hero);
+  const { name, powerstats, imgUrl } = props.hero;
+  return (
     <article className={styles.cardWrapper}>
       <header className={styles.cardHeader}>
         <img src={imgUrl} alt='' />
