@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
-        <Link to='/'>
+        <Link to='/*'>
           <img className={styles.logoImg} src={logo} alt='SuperHero Database' />
         </Link>
         <div className={styles.navSearch}>

@@ -1,9 +1,9 @@
-import { useParams } from 'react-router';
-import styles from './HeroDetailed.module.scss';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router';
+import * as icon from '../../assets/icons';
 import { searchHeroById } from '../../scripts/searchHeroById';
 import Loader from '../Loader/Loader';
-import * as icon from '../../assets/icons';
+import styles from './HeroDetailed.module.scss';
 
 const HeroDetailed = () => {
   const { id } = useParams();
@@ -18,13 +18,14 @@ const HeroDetailed = () => {
 
       if (data.error) {
         console.log(data.error);
-        return;
+        setLoadingState(false);
       }
-      console.log(data);
+
       setIdHero(data);
       setLoadingState(false);
     });
   }, [id]);
+
   const { name, image, powerstats, appearance, biography } = idHero;
   return isLoading ? (
     <div className={styles.container}>

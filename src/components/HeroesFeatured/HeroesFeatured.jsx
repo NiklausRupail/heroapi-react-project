@@ -1,11 +1,11 @@
 import { Fragment, useEffect, useState } from 'react';
+import { v4 as uuid } from 'uuid';
 import '../../assets/icons/index';
 import { getFeaturedHero } from '../../scripts/getFeaturedHero';
 import { getRandomIds } from '../../scripts/getRandomId';
 import HeroCard from '../HeroCard/HeroCard';
-import styles from './HeroesFeatured.module.scss';
 import Loader from '../Loader/Loader';
-import { v4 as uuid } from 'uuid';
+import styles from './HeroesFeatured.module.scss';
 
 const featuredHeroIds = getRandomIds(5);
 

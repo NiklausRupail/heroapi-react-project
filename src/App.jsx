@@ -14,9 +14,10 @@ function App() {
       <Nav />
       <main className='container'>
         <Routes>
-          <Route path='/' element={<HeroesFeatured />} />
           <Route path='/hero/:id' element={<HeroDetailed />} />
           <Route path='/search/:name' element={<SearchView />} />
+          <Route path='/search/' element={<HeroesFeatured />} />
+          <Route path='/*' element={<HeroesFeatured />} />
         </Routes>
       </main>
       <footer></footer>
