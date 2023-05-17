@@ -1,8 +1,7 @@
 import styles from './HeroCard.module.scss';
 
 const HeroCard = (props) => {
-  console.log(props.hero);
-  const { name, powerstats, imgUrl } = props.hero;
+  const { name, powerstats, imgUrl } = props;
   return (
     <article className={styles.cardWrapper}>
       <header className={styles.cardHeader}>
@@ -16,21 +15,23 @@ const HeroCard = (props) => {
             <span>{powerstats.combat}</span>
           </li>
           <li>
-            <p>Power</p>
-            <span>{powerstats.power}</span>
+            <p>Speed</p>
+            <span>{powerstats.speed}</span>
           </li>
           <li>
             <p>Intelligence</p>
             <span>{powerstats.intelligence}</span>
           </li>
+          <li>
+            <p>Durability</p>
+            <span>{powerstats.durability}</span>
+          </li>
+          <li>
+            <p>Strength</p>
+            <span>{powerstats.strength}</span>
+          </li>
         </ul>
       </section>
-      {/* <footer className={styles.cardFooter}>
-        <a href={} target='_blank' rel='noreferrer'>
-          Click to Buy
-        </a>
-        <p>Price {}$</p>
-      </footer> */}
     </article>
   );
 };
