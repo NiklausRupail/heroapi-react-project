@@ -29,7 +29,7 @@
   gap: 2rem;
   .heroImg {
     border-radius: 15px;
-    width: 400px;
+    width: 360px;
     height: 450px;
   }
   .heroData {
@@ -54,6 +54,12 @@
       button {
         border: none;
         padding: 0.5rem 1rem;
+        border-radius: 10px;
+        transition: 0.5s ease-out;
+        &:hover {
+          background-color: black;
+          color: white;
+        }
       }
     }
   }
