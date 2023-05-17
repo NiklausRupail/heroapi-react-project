@@ -25,7 +25,7 @@ const HeroDetailed = () => {
       setLoadingState(false);
     });
   }, [id]);
-  const { name, image, powerstats, appearance } = idHero;
+  const { name, image, powerstats, appearance, biography } = idHero;
   return isLoading ? (
     <div className={styles.container}>
       <Loader />
@@ -82,14 +82,35 @@ const HeroDetailed = () => {
             </div>
           </div>
           <div className={styles.lifeInfo}>
-            <p>Gender: {appearance.gender}</p>
-            <p>Eyes: {appearance['eye-color']}</p>
-            <p>Hair: {appearance['hair-color']}</p>
-            <p>Height: {appearance.height[metricSystem | 0]}</p>
-            <p>Weight: {appearance.weight[metricSystem | 0]}</p>
-            <button onClick={(event) => setMetricSystem(!metricSystem)}>
-              Change Metric System
-            </button>
+            <div>
+              <h2>Apperance</h2>
+              <p>Gender: {appearance.gender}</p>
+              <p>Race: {appearance.race}</p>
+              <p>Eyes: {appearance['eye-color']}</p>
+              <p>Hair: {appearance['hair-color']}</p>
+              <p>Height: {appearance.height[metricSystem | 0]}</p>
+              <p>Weight: {appearance.weight[metricSystem | 0]}</p>
+              <button onClick={() => setMetricSystem(!metricSystem)}>
+                Change Metric System
+              </button>
+              <p></p>
+            </div>
+            <div className={styles.bio}>
+              <h2>Biography</h2>
+              <p>
+                Name: <br /> {biography['full-name']}
+              </p>
+              <p>
+                First Appearance: <br />
+                {biography['first-appearance']}
+              </p>
+              <p>
+                Alignment:
+                {' ' +
+                  biography.alignment[0].toUpperCase() +
+                  biography.alignment.slice(1)}
+              </p>
+            </div>
           </div>
         </div>
       </div>
