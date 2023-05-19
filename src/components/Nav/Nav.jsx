@@ -12,17 +12,23 @@ const Nav = () => {
           <img className={styles.logoImg} src={logo} alt='SuperHero Database' />
         </Link>
         <div className={styles.navSearch}>
-          <input
-            onChange={(event) => {
-              setSearchInputValue(event.target.value);
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              console.log(event);
+              window.location.href = `/search/${event.target[0].value}`;
             }}
-            value={searchInputValue}
-            type='text'
-            name='search'
-          />
-          <Link to={`/search/${searchInputValue}`}>
-            <button>find hero!</button>
-          </Link>
+          >
+            <input
+              onChange={(event) => {
+                setSearchInputValue(event.target.value);
+              }}
+              value={searchInputValue}
+              type='text'
+              name='search'
+            />
+            <button type='submit'>find hero!</button>
+          </form>
         </div>
       </div>
     </nav>
